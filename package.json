@@ -1,18 +1,16 @@
 {
-  "name": "@minescope/mineping",
-  "version": "1.0.4",
-  "description": "Ping both Minecraft Bedrock and Java servers.",
+  "name": "mc-ping",
+  "version": "1.0.0",
+  "description": "Minecraft server pinger",
   "main": "index.js",
   "types": "types/index.d.ts",
   "keywords": [],
   "author": {
-    "name": "Timofey (xzeldon)",
-    "email": "contact@zeldon.ru",
-    "url": "https://zeldon.ru"
+    "name": "Soochaehwa"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/minescope/mineping.git"
+    "url": "git://github.com/Soochaehwa/mc-ping.git"
   },
   "type": "module",
   "engines": {
