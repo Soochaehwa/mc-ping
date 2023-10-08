@@ -5,6 +5,32 @@ export type SampleProp = {
   id: string;
 };
 
+export interface ForgeData {
+  channels: Channel[];
+  mods: Mod[];
+  fmlNetworkVersion: number;
+  truncated: boolean;
+}
+
+export interface Channel {
+  res: string;
+  version: string;
+  required: boolean;
+}
+
+export interface Mod {
+  modId: string;
+  modmarker: string;
+}
+
+export interface ModpackData {
+  protectID: number;
+  name: string;
+  version: string;
+  versionID: number;
+  isMetadata: boolean;
+}
+
 /**
  * `JSON Response` field of Response packet.
  * @see https://wiki.vg/Server_List_Ping#Response
@@ -21,6 +47,18 @@ export type JavaPingResponse = {
   };
   description: string;
   favicon: string;
+  forgeData?: ForgeData;
+  modpackData?: ModpackData;
+  preventsChatReports?: boolean;
+  previewsChat?: boolean;
+  enforcesSecureChat?: boolean;
+  ip: string;
+  port: number;
+  latency: number;
+  srvRecord: {
+    host: string;
+    port: number;
+  } | null;
 };
 
 /**

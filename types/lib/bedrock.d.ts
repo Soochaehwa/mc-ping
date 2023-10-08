@@ -18,6 +18,10 @@ export type BedrockPingResponse = {
   };
   description: string;
   gamemode: string;
+  name: string;
+  ip: string;
+  port: number;
+  latency: number;
 };
 
 /**
