@@ -31,6 +31,15 @@ export interface ModpackData {
   isMetadata: boolean;
 }
 
+export interface ModList {
+  modid: string;
+  version: string;
+}
+
+export interface ModInfo {
+  modList: ModList[];
+  type: string;
+}
 /**
  * `JSON Response` field of Response packet.
  * @see https://wiki.vg/Server_List_Ping#Response
@@ -47,7 +56,8 @@ export type JavaPingResponse = {
   };
   description: string;
   favicon: string;
-  forgeData?: ForgeData;
+  forgeData?: ForgeData; // Forge 1.13+
+  modinfo?: ModInfo; // Forge 1.7 - 1.12
   modpackData?: ModpackData;
   preventsChatReports?: boolean;
   previewsChat?: boolean;
