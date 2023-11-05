@@ -5,8 +5,8 @@
  */
 type PingOptions = {
   port: number;
-  timeout: number;
-  decode: boolean;
+  timeout?: number;
+  decode?: boolean;
 };
 
 export type SampleProp = {

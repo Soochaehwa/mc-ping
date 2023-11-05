@@ -4,7 +4,7 @@
  */
 type PingOptions = {
   port: number;
-  timeout: number;
+  timeout?: number;
 };
 
 export type BedrockPingResponse = {
