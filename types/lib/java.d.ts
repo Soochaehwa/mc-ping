@@ -1,4 +1,13 @@
-import { PingOptions } from "./bedrock";
+/**
+ * @param port The server port.
+ * @param timeout The read/write socket timeout.
+ * @param decode Whether to decode Forge binary data.
+ */
+type PingOptions = {
+  port: number;
+  timeout: number;
+  decode: boolean;
+};
 
 export type SampleProp = {
   name: string;
@@ -10,6 +19,7 @@ export interface ForgeData {
   mods: Mod[];
   fmlNetworkVersion: number;
   truncated: boolean;
+  d?: string; // Forge binary data
 }
 
 export interface Channel {
@@ -28,6 +38,7 @@ export interface ModpackData {
   name: string;
   version: string;
   versionID: number;
+  releaseType?: string;
   isMetadata: boolean;
 }
 

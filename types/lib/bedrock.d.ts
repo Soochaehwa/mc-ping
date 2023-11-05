@@ -2,7 +2,7 @@
  * @param port The server port.
  * @param timeout The read/write socket timeout.
  */
-export type PingOptions = {
+type PingOptions = {
   port: number;
   timeout: number;
 };
@@ -10,7 +10,7 @@ export type PingOptions = {
 export type BedrockPingResponse = {
   version: {
     name: string;
-    protocol: string;
+    protocol: number;
   };
   players: {
     max: string;
