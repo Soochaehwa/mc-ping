@@ -34,7 +34,7 @@ export interface Mod {
 }
 
 export interface ModpackData {
-  protectID: number;
+  projectID: number;
   name: string;
   version: string;
   versionID: number;
